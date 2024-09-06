@@ -6,7 +6,7 @@
 //
 
 #import "DiscoverKingKongTableViewCell.h"
-#import "../Model/DiscoverKingKongTableViewCellType.h"
+#import "DiscoverKingKongTableViewCellType.h"
 #import <Masonry/Masonry.h>
 
 #define kingkongLargeBackgroundColor @"kingkongLargeBackgroundColor"

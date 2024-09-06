@@ -6,8 +6,8 @@
 //
 
 #import "DiscoverViewController.h"
-#import "../Views/DiscoverKingKongTableViewCell.h"
-#import "../Model/WWDCKingKong.h"
+#import "DiscoverKingKongTableViewCell.h"
+#import "WWDCKingKong.h"
 #import <Masonry/Masonry.h>
 
 @interface DiscoverViewController ()
@@ -25,7 +25,7 @@
         self.wwdcKingKongs = @[
             [[WWDCKingKong alloc] initWithDatePublished:@"SEPTEMBER 2024"
                                                   title:@"Hello Developer"
-                                               subtitle:@"Get ready for Apple intelligence, go behind the design with Rytmos, and more"
+                                               subtitle:@"Get ready for Apple intelligence, go behind the design with Rytmos, and more."
                                            featureImage:@"wwdc-highlight"
                                                cellType: DiscoverKingKongTableViewCellTypeLarge],
             [[WWDCKingKong alloc] initWithDatePublished:nil

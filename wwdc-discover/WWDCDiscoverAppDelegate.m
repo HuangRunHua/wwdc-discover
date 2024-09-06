@@ -6,7 +6,7 @@
 //
 
 #import "WWDCDiscoverAppDelegate.h"
-#import "Controllers/DiscoverViewController.h"
+#import "DiscoverViewController.h"
 
 @interface WWDCDiscoverAppDelegate ()
 {

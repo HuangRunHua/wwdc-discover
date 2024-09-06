@@ -13,7 +13,6 @@
                                 title:(nullable NSString *)title
                              subtitle:(nullable NSString *)subtitle
                          featureImage:(nullable NSString *)featureImage
-                           latestNews:(nullable NSString *)latestNews
                              cellType:(DiscoverKingKongTableViewCellType)cellType
 {
     self = [super init];
@@ -22,7 +21,6 @@
         _title = title;
         _subtitle = subtitle;
         _featureImage = featureImage;
-        _latestNews = latestNews;
         _cellType = cellType;
     }
     return self;

@@ -27,19 +27,16 @@
                                                   title:@"Hello Developer"
                                                subtitle:@"Get ready for Apple intelligence, go behind the design with Rytmos, and more"
                                            featureImage:@"wwdc-highlight"
-                                             latestNews:nil
                                                cellType: DiscoverKingKongTableViewCellTypeLarge],
             [[WWDCKingKong alloc] initWithDatePublished:nil
                                                   title:@"Explore new documentation"
                                                subtitle:@"Browse new and updated documentation for technologies, frameworks, and APIs."
                                            featureImage:nil
-                                             latestNews:nil
                                                cellType: DiscoverKingKongTableViewCellTypeMedium],
             [[WWDCKingKong alloc] initWithDatePublished:nil
                                                   title:@"Price and tax updates for apps, In-App Purchases, and subscriptions"
                                                subtitle:nil
                                            featureImage:nil
-                                             latestNews:nil
                                                cellType: DiscoverKingKongTableViewCellTypeSmall],
         ];
     }

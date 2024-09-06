@@ -15,14 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *title;
 @property (nonatomic, strong, nullable) NSString *subtitle;
 @property (nonatomic, strong, nullable) NSString *featureImage;
-@property (nonatomic, strong, nullable) NSString *latestNews;
 @property (nonatomic, assign) DiscoverKingKongTableViewCellType cellType;
 
 - (instancetype)initWithDatePublished:(nullable NSString *)datePublished
                                 title:(nullable NSString *)title
                              subtitle:(nullable NSString *)subtitle
                          featureImage:(nullable NSString *)featureImage
-                           latestNews:(nullable NSString *)latestNews
                              cellType:(DiscoverKingKongTableViewCellType)cellType;
 @end
 

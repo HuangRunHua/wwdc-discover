@@ -21,6 +21,10 @@
 		A9380C2B2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */; };
 		A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */; };
 		A9380C312C8C381300FB3CEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C302C8C381300FB3CEA /* DetailViewController.m */; };
+		A9380C342C8C46C400FB3CEA /* WWDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C332C8C46C400FB3CEA /* WWDCViewController.m */; };
+		A9380C372C8C47BD00FB3CEA /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C362C8C47BD00FB3CEA /* BrowseViewController.m */; };
+		A9380C3A2C8C480400FB3CEA /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C392C8C480400FB3CEA /* AccountViewController.m */; };
+		A9380C3D2C8C482D00FB3CEA /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C3C2C8C482D00FB3CEA /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,14 @@
 		A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoStatusView.m; sourceTree = "<group>"; };
 		A9380C2F2C8C381300FB3CEA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A9380C302C8C381300FB3CEA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A9380C322C8C46C400FB3CEA /* WWDCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWDCViewController.h; sourceTree = "<group>"; };
+		A9380C332C8C46C400FB3CEA /* WWDCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWDCViewController.m; sourceTree = "<group>"; };
+		A9380C352C8C47BD00FB3CEA /* BrowseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
+		A9380C362C8C47BD00FB3CEA /* BrowseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
+		A9380C382C8C480400FB3CEA /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		A9380C392C8C480400FB3CEA /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		A9380C3B2C8C482D00FB3CEA /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		A9380C3C2C8C482D00FB3CEA /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		B0AD9896721BBA046BDB1467 /* libPods-wwdc-discover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wwdc-discover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +158,14 @@
 				A9380C152C8B152600FB3CEA /* DiscoverViewController.m */,
 				A9380C2F2C8C381300FB3CEA /* DetailViewController.h */,
 				A9380C302C8C381300FB3CEA /* DetailViewController.m */,
+				A9380C322C8C46C400FB3CEA /* WWDCViewController.h */,
+				A9380C332C8C46C400FB3CEA /* WWDCViewController.m */,
+				A9380C352C8C47BD00FB3CEA /* BrowseViewController.h */,
+				A9380C362C8C47BD00FB3CEA /* BrowseViewController.m */,
+				A9380C382C8C480400FB3CEA /* AccountViewController.h */,
+				A9380C392C8C480400FB3CEA /* AccountViewController.m */,
+				A9380C3B2C8C482D00FB3CEA /* SearchViewController.h */,
+				A9380C3C2C8C482D00FB3CEA /* SearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,8 +275,12 @@
 			files = (
 				A9380C192C8B16B300FB3CEA /* DiscoverKingKongTableViewCell.m in Sources */,
 				A9380C082C8B134600FB3CEA /* main.m in Sources */,
+				A9380C3A2C8C480400FB3CEA /* AccountViewController.m in Sources */,
 				A9380C162C8B152600FB3CEA /* DiscoverViewController.m in Sources */,
+				A9380C342C8C46C400FB3CEA /* WWDCViewController.m in Sources */,
 				A9380C1F2C8B1A4D00FB3CEA /* WWDCKingKong.m in Sources */,
+				A9380C372C8C47BD00FB3CEA /* BrowseViewController.m in Sources */,
+				A9380C3D2C8C482D00FB3CEA /* SearchViewController.m in Sources */,
 				A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */,
 				A9380C282C8C125300FB3CEA /* Article.m in Sources */,
 				A9380C102C8B140E00FB3CEA /* WWDCDiscoverAppDelegate.m in Sources */,

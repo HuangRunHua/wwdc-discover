@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WWDCDiscoverAppDelegate : NSObject <UIApplicationDelegate>
+@interface WWDCDiscoverAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @end
 

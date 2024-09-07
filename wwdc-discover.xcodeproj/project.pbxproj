@@ -19,6 +19,7 @@
 		A9380C252C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C242C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m */; };
 		A9380C282C8C125300FB3CEA /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C272C8C125300FB3CEA /* Article.m */; };
 		A9380C2B2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */; };
+		A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		A9380C272C8C125300FB3CEA /* Article.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		A9380C292C8C14AB00FB3CEA /* RecentArticlesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentArticlesTableViewCell.h; sourceTree = "<group>"; };
 		A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentArticlesTableViewCell.m; sourceTree = "<group>"; };
+		A9380C2C2C8C256200FB3CEA /* VideoStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoStatusView.h; sourceTree = "<group>"; };
+		A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoStatusView.m; sourceTree = "<group>"; };
 		B0AD9896721BBA046BDB1467 /* libPods-wwdc-discover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wwdc-discover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +130,8 @@
 				A9380C242C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m */,
 				A9380C292C8C14AB00FB3CEA /* RecentArticlesTableViewCell.h */,
 				A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */,
+				A9380C2C2C8C256200FB3CEA /* VideoStatusView.h */,
+				A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				A9380C082C8B134600FB3CEA /* main.m in Sources */,
 				A9380C162C8B152600FB3CEA /* DiscoverViewController.m in Sources */,
 				A9380C1F2C8B1A4D00FB3CEA /* WWDCKingKong.m in Sources */,
+				A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */,
 				A9380C282C8C125300FB3CEA /* Article.m in Sources */,
 				A9380C102C8B140E00FB3CEA /* WWDCDiscoverAppDelegate.m in Sources */,
 				A9380C222C8BE50F00FB3CEA /* FeaturedVideo.m in Sources */,
@@ -321,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -376,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -400,7 +406,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,7 +438,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

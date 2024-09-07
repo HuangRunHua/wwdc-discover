@@ -12,6 +12,7 @@
                                 videoTitle:(NSString *)videoTitle
                                   videoTag:(nullable NSString *)videoTag
                                publishDate:(nullable NSString *)publishDate
+                           userWatchStatus:(nullable NSString *)userWatchStatus
 {
     self = [super init];
     if (self) {
@@ -19,6 +20,7 @@
         _videoTitle = videoTitle;
         _videoTag = videoTag;
         _publishDate = publishDate;
+        _userWatchStatus = userWatchStatus;
     }
     return self;
 }

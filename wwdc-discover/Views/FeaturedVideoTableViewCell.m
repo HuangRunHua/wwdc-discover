@@ -6,6 +6,7 @@
 //
 
 #import "FeaturedVideoTableViewCell.h"
+#import "VideoStatusView.h"
 #import <Masonry/Masonry.h>
 
 #define EDGE_STANDARD_PADDING 10
@@ -21,10 +22,12 @@
 @interface FeaturedVideoTableViewCell ()
 @property (nonatomic, strong) UIView *backgroundContentView;
 @property (nonatomic, strong) UIImageView *videoImageView;
+@property (nonatomic, strong) VideoStatusView *videoStatusView;
 @property (nonatomic, strong) UILabel *videoTagLabel;
 @property (nonatomic, strong) UILabel *videoTitleLabel;
 @property (nonatomic, strong) UILabel *videoPublishedDateLabel;
 @property (nonatomic, strong) UIView *divider;
+
 @end
 
 @implementation FeaturedVideoTableViewCell
@@ -51,6 +54,7 @@
 {
     [self loadBackgroundContentView];
     [self loadVideoImageView];
+    [self loadVideoStatusView];
     [self loadVideoTagLabel];
     [self loadVideoTitleLabel];
     [self loadVideoPublishedDateLabel];
@@ -74,6 +78,7 @@
     self.videoTagLabel.text = featuredVideo.videoTag;
     self.videoTitleLabel.text = featuredVideo.videoTitle;
     self.videoPublishedDateLabel.text = featuredVideo.publishDate;
+    [self.videoStatusView setUserWatchStatus:featuredVideo.userWatchStatus];
 }
 
 -(void)loadBackgroundContentView
@@ -96,6 +101,18 @@
         make.top.equalTo(@(EDGE_STANDARD_PADDING));
         make.left.equalTo(@(0));
         make.bottom.equalTo(@(-EDGE_STANDARD_PADDING));
+    }];
+}
+
+- (void)loadVideoStatusView
+{
+    _videoStatusView = [[VideoStatusView alloc] init];
+    _videoStatusView.layer.masksToBounds = YES;
+    _videoStatusView.layer.cornerRadius = 3.0;
+    [self.videoImageView addSubview:_videoStatusView];
+    [_videoStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(@(-4));
+        make.bottom.equalTo(@(-4));
     }];
 }
 

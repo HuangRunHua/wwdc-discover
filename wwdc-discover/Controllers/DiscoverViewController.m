@@ -54,19 +54,23 @@
             [[FeaturedVideo alloc] initWithVideoFrameImageURL:@"keynote"
                                                    videoTitle:@"Keynote"
                                                      videoTag:nil
-                                                  publishDate:@"June 11, 2024·01:00-03:00"],
+                                                  publishDate:@"June 11, 2024·01:00-03:00"
+                                              userWatchStatus:@"19m left"],
             [[FeaturedVideo alloc] initWithVideoFrameImageURL:@"18-things"
                                                    videoTitle:@"18 things from WWDC24"
                                                      videoTag:@"WWDC24"
-                                                  publishDate:nil],
+                                                  publishDate:nil
+                                              userWatchStatus:@"2m"],
             [[FeaturedVideo alloc] initWithVideoFrameImageURL:@"platforms-state-of-the-union"
                                                    videoTitle:@"Platforms State of the Union"
                                                      videoTag:nil
-                                                  publishDate:@"June 11, 2024·04:00-05:00"],
+                                                  publishDate:@"June 11, 2024·04:00-05:00"
+                                              userWatchStatus:@"1h 6m"],
             [[FeaturedVideo alloc] initWithVideoFrameImageURL:@"platforms-state-of-the-union-5-Minute-recap"
                                                    videoTitle:@"Platforms State of the Union 5-Minute Recap"
                                                      videoTag:@"WWDC24"
-                                                  publishDate:nil],
+                                                  publishDate:nil
+                                              userWatchStatus:@"5m"],
         ];
         
         self.recentArticles = @[

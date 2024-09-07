@@ -5,12 +5,14 @@
 //  Created by huangrunhua on 2024/9/6.
 //
 
+#import <Masonry/Masonry.h>
 #import "DiscoverViewController.h"
 #import "DiscoverKingKongTableViewCell.h"
 #import "FeaturedVideoTableViewCell.h"
+#import "RecentArticlesTableViewCell.h"
 #import "WWDCKingKong.h"
 #import "FeaturedVideo.h"
-#import <Masonry/Masonry.h>
+#import "Article.h"
 
 #define kingKongCellReuseIdentifier @"kingKongCell"
 #define featuredVideoCellReuseIdentifier @"featuredVideoCell"
@@ -19,6 +21,7 @@
 @interface DiscoverViewController ()
 @property (nonatomic, strong) NSArray<WWDCKingKong *> *wwdcKingKongs;
 @property (nonatomic, strong) NSArray<FeaturedVideo *> *featuredVideos;
+@property (nonatomic, strong) NSArray<Article *> *recentArticles;
 
 @property (nonatomic, strong) UITableView *kingkongTableView;
 @end
@@ -65,6 +68,21 @@
                                                      videoTag:@"WWDC24"
                                                   publishDate:nil],
         ];
+        
+        self.recentArticles = @[
+            [[Article alloc] initWithcoverImageURL:@"hello-developer"
+                                        articleTag:@"Articles"
+                                      articleTitle:@"Hello Developer: September 2024"],
+            [[Article alloc] initWithcoverImageURL:@"behind-the-design"
+                                        articleTag:@"Articles"
+                                      articleTitle:@"Behind the Design: The rhythms of Rytmos"],
+            [[Article alloc] initWithcoverImageURL:@"hello-developer-august-2024"
+                                        articleTag:@"Articles"
+                                      articleTitle:@"Hello Developer: August 2024"],
+            [[Article alloc] initWithcoverImageURL:@"creating-the-make-believe-magic-of-lost-in-play"
+                                        articleTag:@"Articles"
+                                      articleTitle:@"Behind the Design: Creating the make-believe magic of Lost in Play"],
+        ];
     }
     return self;
 }
@@ -85,7 +103,7 @@
     self.kingkongTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.kingkongTableView registerClass:[DiscoverKingKongTableViewCell class] forCellReuseIdentifier:kingKongCellReuseIdentifier];
     [self.kingkongTableView registerClass:[FeaturedVideoTableViewCell class] forCellReuseIdentifier:featuredVideoCellReuseIdentifier];
-    [self.kingkongTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:recentArticleCellReuseIdentifier];
+    [self.kingkongTableView registerClass:[RecentArticlesTableViewCell class] forCellReuseIdentifier:recentArticleCellReuseIdentifier];
     [self.view addSubview:self.kingkongTableView];
     [self.kingkongTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(self.view);
@@ -108,9 +126,15 @@
                                            forIndexPath:indexPath];
         cell.featuredVideo = self.featuredVideos[indexPath.item];
         return cell;
+    } else if (indexPath.section == 2) {
+        RecentArticlesTableViewCell *cell = [
+            tableView dequeueReusableCellWithIdentifier:recentArticleCellReuseIdentifier
+                                           forIndexPath:indexPath];
+        cell.article = self.recentArticles[indexPath.item];
+        return cell;
     } else {
         UITableViewCell *cell = [
-            tableView dequeueReusableCellWithIdentifier:recentArticleCellReuseIdentifier
+            tableView dequeueReusableCellWithIdentifier:@"cell"
                                            forIndexPath:indexPath];
         return cell;
     }
@@ -122,6 +146,8 @@
         return self.wwdcKingKongs.count;
     } else if (section == 1) {
         return self.featuredVideos.count;
+    } else if (section == 2) {
+        return self.recentArticles.count;
     } else {
         return 0;
     }
@@ -145,6 +171,17 @@
             make.left.equalTo(@(20));
         }];
         return headrView;
+    } else if (section == 2) {
+        UIView *headrView = [[UIView alloc] init];
+        UILabel *label = [[UILabel alloc] init];
+        label.text = @"Recent articles";
+        label.textAlignment = NSTextAlignmentLeft;
+        label.font = [UIFont boldSystemFontOfSize:20];
+        [headrView addSubview:label];
+        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@(20));
+        }];
+        return headrView;
     } else {
         UIView *headerView = [[UIView alloc] init];
         headerView.backgroundColor = [UIColor clearColor];
@@ -154,7 +191,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
 {
-    if (section == 1) {
+    if (section == 1 || section == 2) {
         return 10.f;
     } else {
         return 0.f;

@@ -20,6 +20,7 @@
 		A9380C282C8C125300FB3CEA /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C272C8C125300FB3CEA /* Article.m */; };
 		A9380C2B2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */; };
 		A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */; };
+		A9380C312C8C381300FB3CEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C302C8C381300FB3CEA /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		A9380C2A2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentArticlesTableViewCell.m; sourceTree = "<group>"; };
 		A9380C2C2C8C256200FB3CEA /* VideoStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoStatusView.h; sourceTree = "<group>"; };
 		A9380C2D2C8C256200FB3CEA /* VideoStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoStatusView.m; sourceTree = "<group>"; };
+		A9380C2F2C8C381300FB3CEA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A9380C302C8C381300FB3CEA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B0AD9896721BBA046BDB1467 /* libPods-wwdc-discover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wwdc-discover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +144,8 @@
 			children = (
 				A9380C142C8B152600FB3CEA /* DiscoverViewController.h */,
 				A9380C152C8B152600FB3CEA /* DiscoverViewController.m */,
+				A9380C2F2C8C381300FB3CEA /* DetailViewController.h */,
+				A9380C302C8C381300FB3CEA /* DetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				A9380C2E2C8C256200FB3CEA /* VideoStatusView.m in Sources */,
 				A9380C282C8C125300FB3CEA /* Article.m in Sources */,
 				A9380C102C8B140E00FB3CEA /* WWDCDiscoverAppDelegate.m in Sources */,
+				A9380C312C8C381300FB3CEA /* DetailViewController.m in Sources */,
 				A9380C222C8BE50F00FB3CEA /* FeaturedVideo.m in Sources */,
 				A9380C252C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m in Sources */,
 				A9380C2B2C8C14AB00FB3CEA /* RecentArticlesTableViewCell.m in Sources */,

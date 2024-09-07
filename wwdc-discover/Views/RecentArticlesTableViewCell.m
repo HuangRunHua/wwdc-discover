@@ -9,9 +9,12 @@
 #import <Masonry/Masonry.h>
 
 #define EDGE_STANDARD_PADDING 10
+#define CHEVRON_RIGHT_WIDTH 10
+#define PADDING_TO_RIGHT_ERROR 7
 
 #define cellDividerColor @"cellDividerColor"
 #define cellTagColor @"cellTagColor"
+#define cellRightArrorColor @"cellRightArrorColor"
 
 @interface RecentArticlesTableViewCell ()
 @property (nonatomic, strong) UIView *backgroundContentView;
@@ -19,6 +22,7 @@
 @property (nonatomic, strong) UILabel *articleTagLabel;
 @property (nonatomic, strong) UILabel *articleTitleLabel;
 @property (nonatomic, strong) UIView *divider;
+@property (nonatomic, strong) UIImageView *rightArrorImageView;
 @end
 
 @implementation RecentArticlesTableViewCell
@@ -47,6 +51,7 @@
 - (void)setupView
 {
     [self loadBackgroundContentView];
+    [self loadRightArrorImageView];
     [self loadArticleImageView];
     [self loadArticleTagLabel];
     [self loadArticleTitleLabel];
@@ -84,7 +89,7 @@
         make.height.equalTo(@(60));
         make.top.equalTo(@(EDGE_STANDARD_PADDING));
         make.left.equalTo(@(0));
-        make.bottom.equalTo(@(-EDGE_STANDARD_PADDING));
+        make.bottom.lessThanOrEqualTo(@(-EDGE_STANDARD_PADDING));
     }];
 }
 
@@ -99,7 +104,7 @@
     [_articleTagLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.articleImageView.mas_right).with.offset(10);
         make.top.equalTo(@(EDGE_STANDARD_PADDING));
-        make.right.equalTo(@(0));
+        make.right.equalTo(self.rightArrorImageView.mas_left).with.offset(-PADDING_TO_RIGHT_ERROR);
     }];
 }
 
@@ -114,7 +119,8 @@
     [_articleTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.articleImageView.mas_right).with.offset(10);
         make.top.equalTo(self.articleTagLabel.mas_bottom).with.offset(1);
-        make.right.equalTo(@(0));
+        make.right.equalTo(self.rightArrorImageView.mas_left).with.offset(-PADDING_TO_RIGHT_ERROR);
+        make.bottom.lessThanOrEqualTo(@(-EDGE_STANDARD_PADDING));
     }];
 }
 
@@ -129,6 +135,22 @@
         make.left.equalTo(self.articleImageView.mas_right).with.offset(EDGE_STANDARD_PADDING);
         make.right.equalTo(self.contentView);
         make.bottom.equalTo(self.contentView);
+    }];
+}
+
+- (void)loadRightArrorImageView
+{
+    _rightArrorImageView = [[UIImageView alloc] init];
+    _rightArrorImageView.tintColor = [UIColor colorNamed:cellRightArrorColor];
+    _rightArrorImageView.image = [UIImage systemImageNamed:@"chevron.right"];
+    _rightArrorImageView.backgroundColor = [UIColor clearColor];
+    _rightArrorImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.backgroundContentView addSubview:_rightArrorImageView];
+    [_rightArrorImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(CHEVRON_RIGHT_WIDTH));
+        make.width.equalTo(@(CHEVRON_RIGHT_WIDTH));
+        make.right.equalTo(@(-EDGE_STANDARD_PADDING));
+        make.centerY.equalTo(self.backgroundContentView.mas_centerY);
     }];
 }
 

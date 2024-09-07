@@ -10,6 +10,8 @@
 #import <Masonry/Masonry.h>
 
 #define EDGE_STANDARD_PADDING 10
+#define CHEVRON_RIGHT_WIDTH 10
+#define PADDING_TO_RIGHT_ERROR 7
 
 #define kingkongLargeBackgroundColor @"kingkongLargeBackgroundColor"
 #define kingkongMediumBackgroundColor @"kingkongMediumBackgroundColor"
@@ -18,6 +20,7 @@
 #define cellDividerColor @"cellDividerColor"
 #define cellSubtitleColor @"cellSubtitleColor"
 #define cellTagColor @"cellTagColor"
+#define cellRightArrorColor @"cellRightArrorColor"
 
 @interface FeaturedVideoTableViewCell ()
 @property (nonatomic, strong) UIView *backgroundContentView;
@@ -27,6 +30,7 @@
 @property (nonatomic, strong) UILabel *videoTitleLabel;
 @property (nonatomic, strong) UILabel *videoPublishedDateLabel;
 @property (nonatomic, strong) UIView *divider;
+@property (nonatomic, strong) UIImageView *rightArrorImageView;
 
 @end
 
@@ -53,6 +57,7 @@
 - (void)setupView
 {
     [self loadBackgroundContentView];
+    [self loadRightArrorImageView];
     [self loadVideoImageView];
     [self loadVideoStatusView];
     [self loadVideoTagLabel];
@@ -127,7 +132,7 @@
     [_videoTagLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.videoImageView.mas_right).with.offset(10);
         make.top.equalTo(@(EDGE_STANDARD_PADDING));
-        make.right.equalTo(@(0));
+        make.right.equalTo(self.rightArrorImageView.mas_left).with.offset(-PADDING_TO_RIGHT_ERROR);
     }];
 }
 
@@ -143,7 +148,7 @@
         make.left.equalTo(self.videoImageView.mas_right).with.offset(10);
         make.top.equalTo(@(EDGE_STANDARD_PADDING)).priorityMedium();
         make.top.equalTo(self.videoTagLabel.mas_bottom).with.offset(1).priorityHigh();
-        make.right.equalTo(@(0));
+        make.right.equalTo(self.rightArrorImageView.mas_left).with.offset(-PADDING_TO_RIGHT_ERROR);
     }];
 }
 
@@ -159,7 +164,7 @@
     [_videoPublishedDateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.videoImageView.mas_right).with.offset(10);
         make.top.equalTo(self.videoTitleLabel.mas_bottom).with.offset(1);
-        make.right.equalTo(@(0));
+        make.right.equalTo(self.rightArrorImageView.mas_left).with.offset(-PADDING_TO_RIGHT_ERROR);
     }];
 }
 
@@ -174,6 +179,22 @@
         make.left.equalTo(self.videoImageView.mas_right).with.offset(EDGE_STANDARD_PADDING);
         make.right.equalTo(self.contentView);
         make.bottom.equalTo(self.contentView);
+    }];
+}
+
+- (void)loadRightArrorImageView
+{
+    _rightArrorImageView = [[UIImageView alloc] init];
+    _rightArrorImageView.tintColor = [UIColor colorNamed:cellRightArrorColor];
+    _rightArrorImageView.image = [UIImage systemImageNamed:@"chevron.right"];
+    _rightArrorImageView.backgroundColor = [UIColor clearColor];
+    _rightArrorImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.backgroundContentView addSubview:_rightArrorImageView];
+    [_rightArrorImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(CHEVRON_RIGHT_WIDTH));
+        make.width.equalTo(@(CHEVRON_RIGHT_WIDTH));
+        make.right.equalTo(@(-EDGE_STANDARD_PADDING));
+        make.centerY.equalTo(self.backgroundContentView.mas_centerY);
     }];
 }
 

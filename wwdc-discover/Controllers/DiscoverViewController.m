@@ -10,6 +10,7 @@
 #import "DiscoverKingKongTableViewCell.h"
 #import "FeaturedVideoTableViewCell.h"
 #import "RecentArticlesTableViewCell.h"
+#import "DetailViewController.h"
 #import "WWDCKingKong.h"
 #import "FeaturedVideo.h"
 #import "Article.h"
@@ -200,6 +201,13 @@
     } else {
         return 0.f;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end

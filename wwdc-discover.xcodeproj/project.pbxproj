@@ -15,6 +15,8 @@
 		A9380C162C8B152600FB3CEA /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C152C8B152600FB3CEA /* DiscoverViewController.m */; };
 		A9380C192C8B16B300FB3CEA /* DiscoverKingKongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C182C8B16B300FB3CEA /* DiscoverKingKongTableViewCell.m */; };
 		A9380C1F2C8B1A4D00FB3CEA /* WWDCKingKong.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C1E2C8B1A4D00FB3CEA /* WWDCKingKong.m */; };
+		A9380C222C8BE50F00FB3CEA /* FeaturedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C212C8BE50F00FB3CEA /* FeaturedVideo.m */; };
+		A9380C252C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9380C242C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		A9380C1A2C8B16F800FB3CEA /* DiscoverKingKongTableViewCellType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverKingKongTableViewCellType.h; sourceTree = "<group>"; };
 		A9380C1D2C8B1A4D00FB3CEA /* WWDCKingKong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWDCKingKong.h; sourceTree = "<group>"; };
 		A9380C1E2C8B1A4D00FB3CEA /* WWDCKingKong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWDCKingKong.m; sourceTree = "<group>"; };
+		A9380C202C8BE50F00FB3CEA /* FeaturedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedVideo.h; sourceTree = "<group>"; };
+		A9380C212C8BE50F00FB3CEA /* FeaturedVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedVideo.m; sourceTree = "<group>"; };
+		A9380C232C8BED1500FB3CEA /* FeaturedVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedVideoTableViewCell.h; sourceTree = "<group>"; };
+		A9380C242C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedVideoTableViewCell.m; sourceTree = "<group>"; };
 		B0AD9896721BBA046BDB1467 /* libPods-wwdc-discover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wwdc-discover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +104,8 @@
 				A9380C1A2C8B16F800FB3CEA /* DiscoverKingKongTableViewCellType.h */,
 				A9380C1D2C8B1A4D00FB3CEA /* WWDCKingKong.h */,
 				A9380C1E2C8B1A4D00FB3CEA /* WWDCKingKong.m */,
+				A9380C202C8BE50F00FB3CEA /* FeaturedVideo.h */,
+				A9380C212C8BE50F00FB3CEA /* FeaturedVideo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +115,8 @@
 			children = (
 				A9380C172C8B16B300FB3CEA /* DiscoverKingKongTableViewCell.h */,
 				A9380C182C8B16B300FB3CEA /* DiscoverKingKongTableViewCell.m */,
+				A9380C232C8BED1500FB3CEA /* FeaturedVideoTableViewCell.h */,
+				A9380C242C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 				A9380C162C8B152600FB3CEA /* DiscoverViewController.m in Sources */,
 				A9380C1F2C8B1A4D00FB3CEA /* WWDCKingKong.m in Sources */,
 				A9380C102C8B140E00FB3CEA /* WWDCDiscoverAppDelegate.m in Sources */,
+				A9380C222C8BE50F00FB3CEA /* FeaturedVideo.m in Sources */,
+				A9380C252C8BED1500FB3CEA /* FeaturedVideoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

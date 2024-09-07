@@ -113,7 +113,7 @@
     [self.contentView addSubview:_backgroundContentView];
     
     [_backgroundContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 10, 10, 10));
+        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 20, 10, 20));
     }];
 }
 

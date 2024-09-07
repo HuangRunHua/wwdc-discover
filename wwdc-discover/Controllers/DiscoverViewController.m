@@ -185,6 +185,17 @@
         [headrView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(20));
+            make.centerY.equalTo(@(0));
+        }];
+        
+        UIButton *seeAllButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [seeAllButton setTitle:@"See all" forState:UIControlStateNormal];
+        [seeAllButton addTarget:self action:@selector(seeAllButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        seeAllButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [headrView addSubview:seeAllButton];
+        [seeAllButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@(-20));
+            make.centerY.equalTo(@(0));
         }];
         return headrView;
     } else {
@@ -206,6 +217,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (void)seeAllButtonTapped:(UIButton *)button
+{
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
